@@ -41,7 +41,7 @@ export default {
 }
 
 input.form-element {
-	max-width: 320px;
+	max-width: 300px;
 	background: #fff2;
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
