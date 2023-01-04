@@ -53,6 +53,8 @@ export default {
 					name: task.name,
 					pending: task.pending || true,
 				});
+			} else {
+				alert('Essa tarefa já existe!')
 			}
 		},
 

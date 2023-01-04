@@ -19,9 +19,13 @@ export default {
 		};
 	},
 	methods: {
-		addTask() {
-			this.$emit('addTask', { name: this.name });
-			this.name = '';
+        addTask() {
+            if ( this.name.length > 0 ) {
+                this.$emit('addTask', { name: this.name });
+                this.name = '';
+            } else {
+                return alert('Adicione uma Tarefa!')
+            }
 		},
 	},
 };
@@ -34,14 +38,14 @@ export default {
 
 .form-element {
 	outline: none;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	border: 1px solid #fff;
 	padding: 5px 10px 8px;
 	color: #fff;
 }
 
 input.form-element {
-	max-width: 300px;
+	max-width: 230px;
 	background: #fff2;
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
